@@ -1,0 +1,6 @@
+{
+  "name": "Algorithm and Code Visualizer",
+  "description": "An interactive, beautiful step-by-step algorithm and data structure visualizer with code walkthroughs. Supported by built-in templates and AI-powered custom algorithm generator.",
+  "requestFramePermissions": ["display-capture"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
