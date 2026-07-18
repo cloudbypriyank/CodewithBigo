@@ -35,8 +35,8 @@ async function generateContentWithFallback(options: {
 }) {
   const keys = [
     process.env.GEMINI_API_KEY,
-    process.env.FALLBACK_GEMINI_API_KEY_1 || "AQ.Ab8RN6JN7hXqe_2oMIYAs5SC6f09o31oH6wS34IcsMy44KOFLA",
-    process.env.FALLBACK_GEMINI_API_KEY_2 || "AQ.Ab8RN6JQPMxXAW68EHSJBg1oxKTAJ3HGXkvsGUynGthbLMB0kA"
+    process.env.FALLBACK_GEMINI_API_KEY_1,
+    process.env.FALLBACK_GEMINI_API_KEY_2
   ].filter(Boolean) as string[];
 
   let lastError: any = null;
