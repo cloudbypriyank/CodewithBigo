@@ -845,7 +845,7 @@ function generateFallbackTrace(rawTopic: string): any {
 
 async function startServer() {
   const app = express();
-  const PORT = 3000;
+  const PORT = process.env.PORT || 3000;
 
   app.use(express.json());
 
@@ -1134,7 +1134,7 @@ Provide an extremely detailed, accurate trace so that clicking "Next" in the UI 
 
       const responseText = response.text;
       if (!responseText) {
-        throw new Error("No response received from Gemini.");
+        throw new Error("No response received from Big-AI.");
       }
 
       const visualData = JSON.parse(responseText.trim());
@@ -1187,7 +1187,7 @@ Provide an extremely detailed, accurate trace so that clicking "Next" in the UI 
 
         // Add a flag to let the client know this was generated locally with high-fidelity
         fallbackData.isFallback = true;
-        fallbackData.fallbackReason = err.message || "Gemini service unavailable";
+        fallbackData.fallbackReason = err.message || "Big-AI service unavailable";
 
         res.json(fallbackData);
       } catch (fallbackErr: any) {
@@ -1544,7 +1544,7 @@ Return a JSON object conforming exactly to this structure:
         return res.status(400).json({ error: "Code is required" });
       }
 
-      console.log(`Executing code via Gemini sandbox runner for ${language}...`);
+      console.log(`Executing code via Big-AI sandbox runner for ${language}...`);
       const response = await generateContentWithFallback({
         model: "gemini-2.5-flash",
         contents: `You are a high-fidelity code compiler, interpreter, and sandbox execution environment.
