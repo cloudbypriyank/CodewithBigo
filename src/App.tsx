@@ -1951,7 +1951,7 @@ export default function App() {
     setGenerationLogs(["Analyzing algorithm semantics...", "Bootstrapping state-space trace..."]);
     const logInterval = setInterval(() => {
       const logs = [
-        "Consulting Gemini Educator...",
+        "Consulting Big(O)-AI...",
         "Structuring variable dependencies...",
         "Formulating visualization frame sequence...",
         "Validating block colors and state transitions...",
@@ -4289,6 +4289,7 @@ function PricingSection({ isPro, simulatedPlan, setSimulatedPlan, ClerkPricingTa
         <div className="min-h-[200px] w-full rounded-2xl overflow-visible bg-black/25 border border-white/5">
           {ClerkPricingTable ? (
             <div className="w-full p-4 text-slate-200 overflow-visible">
+              <p className="text-sm font-semibold text-white"> Pricing is being refreshed — please check back shortly for the latest plan options. </p>
               <ClerkPricingTable />
             </div>
           ) : (
