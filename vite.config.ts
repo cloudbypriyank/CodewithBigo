@@ -19,5 +19,8 @@ export default defineConfig(() => {
       watch: process.env.DISABLE_HMR === 'true' ? null : {},
       allowedHosts: true,
     },
+    build: {
+      sourcemap: false,
+    },
   };
 });

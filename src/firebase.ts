@@ -1,13 +1,16 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
+import dotenv from "dotenv";
+dotenv.config();
+
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBqXVh2Gym8drGJvJ_QouIKZiN2cbQgCBc",
-  authDomain: "starry-marker-fwjkk.firebaseapp.com",
-  projectId: "starry-marker-fwjkk",
-  storageBucket: "starry-marker-fwjkk.firebasestorage.app",
-  messagingSenderId: "427578422566",
-  appId: "1:427578422566:web:be03e542beac4f7b88fde7"
+  apiKey: process.env.API_KEY,
+  authDomain: process.env.AUTH_DOMAIN,
+  projectId: process.env.PROJECT_ID,
+  storageBucket: process.env.STORAGE_BUCKET,
+  messagingSenderId: process.env.MESSAGING_SENDER_ID,
+  appId: process.env.APP_ID
 };
 
 const app = initializeApp(firebaseConfig);
