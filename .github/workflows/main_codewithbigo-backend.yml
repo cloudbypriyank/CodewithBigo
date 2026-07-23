@@ -35,8 +35,13 @@ jobs:
           name: node-app
           path: |
             dist
+            src
+            server.ts
             index.html
             package.json
+            package-lock.json
+            tsconfig.json
+            vite.config.ts
             firebase-applet-config.json
 
   deploy:
